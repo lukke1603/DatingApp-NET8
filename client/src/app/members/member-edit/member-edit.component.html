@@ -12,7 +12,7 @@
     </div>
     <div class="col-4">
       <div class="card">
-        <img 
+        <img
           [src]="member.photoUrl || './assets/users.png'"
           [alt]="member.knownAs"
           class="card-img img-thumbnail">
@@ -73,17 +73,17 @@
 
             <div class="d-flex align-items-center">
               <label>City</label>
-              <input 
+              <input
                 type="text"
-                [(ngModel)]="member.city" 
+                [(ngModel)]="member.city"
                 class="form-control"
                 name="city"
               />
 
               <label>Country</label>
-              <input 
+              <input
                 type="text"
-                [(ngModel)]="member.country" 
+                [(ngModel)]="member.country"
                 class="form-control"
                 name="country"
               />
@@ -91,9 +91,8 @@
           </form>
         </tab>
         <tab heading="Edit photos">
-          Photo Edit will go here
+          <app-photo-editor [member]="member"></app-photo-editor>
         </tab>
-       
       </tabset>
     </div>
   </div>
